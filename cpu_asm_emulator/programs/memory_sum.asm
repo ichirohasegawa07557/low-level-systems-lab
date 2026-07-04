@@ -1,0 +1,32 @@
+; Sum five values stored in memory.
+MOV R0, 200
+MOV R1, 3
+STORE R1, [R0]
+MOV R1, 4
+MOV R7, 1
+ADD R0, R0, R7
+STORE R1, [R0]
+MOV R1, 5
+ADD R0, R0, R7
+STORE R1, [R0]
+MOV R1, 6
+ADD R0, R0, R7
+STORE R1, [R0]
+MOV R1, 7
+ADD R0, R0, R7
+STORE R1, [R0]
+
+MOV R0, 200
+MOV R2, 0
+MOV R3, 5
+MOV R4, 0
+MOV R7, 1
+sum_loop:
+LOAD R5, [R0]
+ADD R2, R2, R5
+ADD R0, R0, R7
+ADD R4, R4, R7
+CMP R4, R3
+JL sum_loop
+PRINT R2
+HALT

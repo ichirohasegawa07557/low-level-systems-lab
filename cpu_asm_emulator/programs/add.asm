@@ -1,0 +1,9 @@
+; Simple arithmetic demo
+MOV R1, 10
+MOV R2, 20
+ADD R3, R1, R2
+PRINT R3
+STORE R3, [100]
+LOAD R4, [100]
+PRINT R4
+HALT

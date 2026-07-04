@@ -1,0 +1,13 @@
+; Sum 1..10 into R2
+MOV R0, 1
+MOV R1, 10
+MOV R2, 0
+MOV R7, 1
+loop:
+ADD R2, R2, R0
+ADD R0, R0, R7
+CMP R0, R1
+JL loop
+ADD R2, R2, R1
+PRINT R2
+HALT
